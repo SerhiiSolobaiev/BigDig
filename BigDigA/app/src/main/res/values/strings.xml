@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">BigDigA</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="tab_test">Test</string>
+    <string name="tab_history">History</string>
+    <string name="ok">OK</string>
+    <string name="no_bigdig_b">Please, install second application!</string>
+    <string name="sort_by">Sort by</string>
+    <string name="sort_by_date">Date</string>
+    <string name="sort_by_status">Status</string>
+    <string name="no_pictures">No pictures yet</string>
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.myandroid.bigdiga">
+
+    <permission android:name="com.myandroid.bigdiga.provider.PicturesContentProvider.READ_DATABASE" android:protectionLevel="normal"/>
+    <permission android:name="com.myandroid.bigdiga.provider.PicturesContentProvider.WRITE_DATABASE" android:protectionLevel="normal"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name=".provider.PicturesContentProvider"
+            android:authorities="com.myandroid.bigdiga.provider.PicturesContentProvider"
+            android:exported="true"
+            android:readPermission="com.myandroid.bigdiga.provider.PicturesContentProvider.READ_DATABASE"
+            android:writePermission="com.myandroid.bigdiga.provider.PicturesContentProvider.WRITE_DATABASE" />
+    </application>
+
+</manifest>

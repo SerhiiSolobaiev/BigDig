@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">BigDigB</string>
+    <string name="not_from_bigdig_a">This application is not a standalone application and will be closed in 10 seconds</string>
+    <string name="close_in">This application will be closed in %1$d seconds</string>
+    <string name="url_deleted">Url "%1$s" deleted!</string>
+</resources>
