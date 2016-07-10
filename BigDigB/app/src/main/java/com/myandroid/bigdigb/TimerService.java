@@ -27,15 +27,11 @@ public class TimerService extends IntentService {
 
     @Override
     protected void onHandleIntent(Intent intent) {
-        Toast.makeText(getApplicationContext(), "in onHandleIntent(Intent intent) before",
-                Toast.LENGTH_SHORT).show();
         try {
             TimeUnit.SECONDS.sleep(DELAY);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        Toast.makeText(getApplicationContext(), "in onHandleIntent(Intent intent) after",
-                Toast.LENGTH_SHORT).show();
         int id = intent.getIntExtra(EXTRA_PICTURE_ID, -1);
         String url = intent.getStringExtra(EXTRA_PICTURE_URL);
         deleteInBigDigADB(id, url);

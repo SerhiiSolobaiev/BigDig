@@ -167,8 +167,6 @@ public class ShowPictureFragment extends Fragment {
     }
 
     private void deletePictureWithStatusDownloaded(Picture picture) {
-        Toast.makeText(getActivity(),"in deletePictureWithStatusDownloaded",
-                Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(getActivity(),TimerService.class);
         intent.putExtra(EXTRA_PICTURE_ID, picture.getId());
         intent.putExtra(EXTRA_PICTURE_URL, picture.getUrl());

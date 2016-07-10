@@ -23,7 +23,7 @@ public class Utility {
         i.addCategory(Intent.CATEGORY_LAUNCHER);
         i.putExtra(EXTRA_NAME, true);
         i.putExtra(EXTRA_FRAGMENT, fragment);
-        i.putExtra(EXTRA_PICTURE_URL, "http://i.imgur.com/dVs98CK.jpg?1"/*pictureUrl*/);
+        i.putExtra(EXTRA_PICTURE_URL, pictureUrl/*http://i.imgur.com/dVs98CK.jpg?1*/);
         Log.v("ForBigDigB:", "From fragment = " + fragment);
         Log.v("ForBigDigB:", "PictureUrl = " + pictureUrl);
         context.startActivity(i);
