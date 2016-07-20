@@ -1,7 +1,5 @@
 package com.myandroid.bigdigb.model;
 
-import java.util.UUID;
-
 public class Picture {
     private int id;
     private String url;

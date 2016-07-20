@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
 
-    private static final String EXTRA_NAME = "BigDigA";
+    private static final String EXTRA_NAME = "BigDigA"; //for detecting if BigDigB opened from BigDigA
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         if (getIntent() != null) {
             if (getIntent().getBooleanExtra(EXTRA_NAME, false)) {
                 Log.v(LOG_TAG,"App opened from BigDigA");
-                Toast.makeText(getApplicationContext(), "From BigDigA", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext(), "From BigDigA", Toast.LENGTH_SHORT).show();
                 transaction.add(R.id.container, new ShowPictureFragment());
             } else {
                 Log.v(LOG_TAG,"App opened from launcher");

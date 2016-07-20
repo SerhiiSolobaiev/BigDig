@@ -1,18 +1,16 @@
 package com.myandroid.bigdiga.model;
 
-import java.util.UUID;
-
 public class Picture {
-    private UUID id;
+    private int id;
     private String url;
     private Status status;
     private String time;
 
-    public UUID getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(int id) {
         this.id = id;
     }
 

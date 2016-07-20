@@ -10,4 +10,5 @@
     <string name="sort_by_date">Date</string>
     <string name="sort_by_status">Status</string>
     <string name="no_pictures">No pictures yet</string>
+    <string name="enter_url">Please, enter valid url for picture!</string>
 </resources>

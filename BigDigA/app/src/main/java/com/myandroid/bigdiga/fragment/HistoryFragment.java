@@ -29,6 +29,7 @@ import java.util.List;
 public class HistoryFragment extends Fragment {
     private static final String LOG_TAG = TestFragment.class.getSimpleName();
 
+    public static final String COLUMN_UUID = "_id";
     public static final String COLUMN_TIME = "time";
     public static final String COLUMN_STATUS = "status";
     public static final String COLUMN_URL = "url";
@@ -60,8 +61,8 @@ public class HistoryFragment extends Fragment {
     }
 
     @Override
-    public void onStart() {
-        super.onStart();
+    public void onResume() {
+        super.onResume();
         updatePicturesList();//(
         if (recyclerView.getAdapter().getItemCount() == 0) {
             isTextViewNoPicturesVisible(true);
@@ -91,10 +92,11 @@ public class HistoryFragment extends Fragment {
     private List<Picture> getPicturesFromBD() {
         List<Picture> pictures = new ArrayList<>();
         Cursor c = getActivity().getContentResolver().query(PICTURE_URI, null, null, null,
-                AppPreferences.getSortMethod(getActivity()));
+                AppPreferences.getSortMethod(getActivity()) + " DESC");
         if (c.moveToFirst()) {
             do {
                 Picture picture = new Picture();
+                picture.setId(c.getInt(c.getColumnIndex(COLUMN_UUID)));
                 picture.setUrl(c.getString(c.getColumnIndex(COLUMN_URL)));
                 picture.setStatus(Status.values()[c.getInt(c.getColumnIndex(COLUMN_STATUS)) - 1]);
 
